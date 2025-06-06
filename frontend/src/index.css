@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Agu+Display&family=Poppins&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: "Poppins", "sans-serif";
+  }
+
+  body {
+    background-color: "#fdfeff";
+    overflow-x: hidden;
+  }
+}
+@layer components {
+  .input-box {
+    @apply w-full text-sm bg-transparent border-[1px] px-5 p-3 rounded mb-4 outline-none;
+  }
+  .btn-primary {
+    @apply w-full font-medium bg-blue-500 text-white p-2 rounded my-1 active:bg-blue-600;
+  }
+}
