@@ -2,17 +2,29 @@ import React, { useState } from "react";
 import ProfileInfo from "../Cards/ProfileInfo";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
+import toast from "react-hot-toast";
 
-const Navbar = () => {
+const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
+  // const [logIn, setLogIn] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
   const onLogout = () => {
     navigate("/login");
+    localStorage.clear();
+
+    // console.log(logIn);
+
+    toast.success("Logged out successfully");
   };
 
-  const handleSearch = () => {};
+  const handleSearch = () => {
+    if (searchQuery) {
+      onSearchNote(searchQuery);
+    }
+  };
   const onClearSearch = () => {
     setSearchQuery("");
+    handleClearSearch();
   };
 
   return (
@@ -26,7 +38,7 @@ const Navbar = () => {
         handleSearch={handleSearch}
         onClearSearch={onClearSearch}
       />
-      <ProfileInfo onLogout={onLogout} />
+      {userInfo && <ProfileInfo userInfo={userInfo} onLogout={onLogout} />}
     </div>
   );
 };
