@@ -182,5 +182,6 @@ http://localhost:8000
    ```sh
    npm run dev
    ```
+<p><strong>🔗 Live demo: <a href="https://notes-app-1-vvgp.onrender.com">Notes_App</a></strong></p>
 
 ## License
