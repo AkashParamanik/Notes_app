@@ -9,6 +9,7 @@ import { Toaster } from "react-hot-toast";
 const routes = (
   <Router>
     <Routes>
+      <Route path="/" exact element={<Login />} />
       <Route path="/dashboard" exact element={<Home />} />
       <Route path="/login" exact element={<Login />} />
       <Route path="/signup" exact element={<Signup />} />{" "}
