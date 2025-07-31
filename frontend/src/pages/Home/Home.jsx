@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import NoteCard from "../../components/Cards/NoteCard";
 import { MdAdd } from "react-icons/md";
-import AddEditNotes from "./AddEditnotes";
+import AddEditNotes from "./AddEditNotes";
 import { IoIosSchool } from "react-icons/io";
 import moment from "moment";
 import Modal from "react-modal";
